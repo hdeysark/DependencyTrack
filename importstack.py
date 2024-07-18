@@ -131,7 +131,7 @@ def get_api_key():
     return os.getenv('API_KEY')
 
 def get_site_url():
-    return os.getenv('SITE_URL')
+    return os.getenv('BASE_URL')
 
 api_key = get_api_key()
 site_url = get_site_url()
