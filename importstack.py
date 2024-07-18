@@ -142,3 +142,6 @@ print(f"Site URL: {site_url}")
 
 getStacks()
 print(stacks)
+
+response = requests.get(site_url + '/version')
+print(response.text)
