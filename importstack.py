@@ -127,3 +127,4 @@ def find_sbom_files(directory):
 
 
 getStacks()
+print(stacks)
