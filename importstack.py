@@ -143,5 +143,6 @@ print(f"Site URL: {site_url}")
 getStacks()
 print(stacks)
 
+response = requests.get('http://localhost:8081/api/version')
 response = requests.get(site_url + '/version')
 print(response.text)
