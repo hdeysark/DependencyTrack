@@ -10,7 +10,7 @@ pipeline {
 
         stage('Run') {
             steps {
-                sh 'python importstack.py'
+                sh 'python3 importstack.py'
             }
         }
 
