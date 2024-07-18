@@ -15,8 +15,8 @@ pipeline {
 
         stage('Run') {
             steps {
-                echo '$API_KEY'
-                echo '$BASE_URL'
+                echo "$API_KEY"
+                echo "$BASE_URL"
                 sh 'python3 importstack.py'
             }
         }
