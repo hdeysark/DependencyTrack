@@ -147,3 +147,5 @@ print(stacks)
 
 print(f"Stack Name: {stack_name}")
 print(f"Build Number: {build_number}")
+
+DownloadSbom(stack_name, build_number)
