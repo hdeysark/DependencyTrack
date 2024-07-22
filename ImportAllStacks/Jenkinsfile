@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    environment {
+        API_KEY = credentials('depTrack_local_API_KEY')
+        BASE_URL = credentials('depTrack_local_baseurl')
+    }
+
+    stages {
+        stage('Start') {
+            steps {
+                echo 'Start'
+            }
+        }
+
+        stage('Cleanup') {
+            sh 'python3 cleanup.py'
+        }
+
+        stage ('Complete') {
+            steps {
+                echo 'Completed'
+            }
+        }
+    }
+
+    
+}
