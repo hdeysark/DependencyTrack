@@ -17,11 +17,11 @@ pipeline {
             }
         }
 
-        stage('Cleanup') {
-            steps{
-                sh 'python3 cleanup.py'
-            }
-        }
+        // stage('Cleanup') {
+        //     steps{
+        //         sh 'python3 cleanup.py'
+        //     }
+        // }
 
         stage('Import All Stacks') {
             steps {
