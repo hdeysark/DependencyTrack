@@ -7,6 +7,23 @@ import datetime
 import json
 
 
+def get_api_key():
+    return os.getenv('API_KEY')
+
+def get_site_url():
+    return os.getenv('BASE_URL')
+
+def get_stack_name():
+    return os.getenv('STACK_NAME')
+
+def get_build_number():
+    return os.getenv('BUILD_NUMBER')
+
+deptrack_api_key = get_api_key()
+deptrack_baseurl = get_site_url()
+stack_name = get_stack_name()
+build_number = get_build_number()
+
 stacks = {
     'CDH': 'parcel',
     'CM': 'parcel',
@@ -125,25 +142,8 @@ def find_sbom_files(directory):
                     print(f'Invalid JSON file skipped: {file_path}')
     return sbom_files
 
-
-
-def get_api_key():
-    return os.getenv('API_KEY')
-
-def get_site_url():
-    return os.getenv('BASE_URL')
-
-api_key = get_api_key()
-site_url = get_site_url()
-
-# Use the API key and site URL in your code
-print(f"API Key: {api_key}")
-print(f"Site URL: {site_url}")
-
 getStacks()
 print(stacks)
 
-# response = requests.get('http://10.200.5.57:8080/api/version')
-response = requests.get(site_url + '/version')
-
-print(response.text)
+print(f"Stack Name: {stack_name}")
+print(f"Build Number: {build_number}")
