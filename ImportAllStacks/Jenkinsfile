@@ -14,7 +14,9 @@ pipeline {
         }
 
         stage('Cleanup') {
-            sh 'python3 cleanup.py'
+            steps{
+                sh 'python3 cleanup.py'
+            }
         }
 
         stage ('Complete') {
