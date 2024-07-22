@@ -7,7 +7,7 @@ pipeline {
         JOB_NAME = "ImportStack"
         USERNAME = credentials('jenkins_username') 
         API_TOKEN = credentials('jenkins_apitoken')
-        JENKINS_URL = "localhost:8100"
+        JENKINS_URL = "http://localhost:8100"
     }
 
     stages {
