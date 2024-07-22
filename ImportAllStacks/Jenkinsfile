@@ -4,6 +4,10 @@ pipeline {
     environment {
         API_KEY = credentials('depTrack_local_API_KEY')
         BASE_URL = credentials('depTrack_local_baseurl')
+        JOB_NAME = "ImportStack"
+        USERNAME = credentials('jenkins_username') 
+        API_TOKEN = credentials('jenkins_apitoken')
+        JENKINS_URL = "localhost:8100"
     }
 
     stages {
@@ -16,6 +20,12 @@ pipeline {
         stage('Cleanup') {
             steps{
                 sh 'python3 cleanup.py'
+            }
+        }
+
+        stage('Import All Stacks') {
+            steps {
+                sh 'python3 importallstacks.py'
             }
         }
 
