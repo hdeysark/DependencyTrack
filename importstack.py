@@ -143,7 +143,7 @@ print(f"Site URL: {site_url}")
 getStacks()
 print(stacks)
 
-# response = requests.get('http://localhost:8081/api/version')
+response = requests.get('http://10.200.5.57:8080/api/version')
 # response = requests.get(site_url + '/version')
-response = requests.get('https://www.google.com')
+
 print(response.text)
