@@ -58,3 +58,7 @@ def cleanup():
     except Exception as e:
         print("An error occurred:", str(e))
         return "Unable cleanup", 400
+    
+
+if __name__ == '__main__':
+    cleanup()
