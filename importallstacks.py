@@ -95,6 +95,6 @@ def import_stack(stackname):
 
 if __name__ == '__main__':
 
-    trigger_jenkins_build_import_stack('CB', '2.88.0-b12')
+    # trigger_jenkins_build_import_stack('CB', '2.88.0-b12')
 
-    # importall()
+    importall()
