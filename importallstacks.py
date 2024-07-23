@@ -60,7 +60,7 @@ def importall():
     threads = []
 
     for stack in stacks.keys():
-        thread = threading.Thread(import_stack, args=(stack,))
+        thread = threading.Thread(target=import_stack, args=(stack,))
         thread.start()
         threads.append(thread)
 
