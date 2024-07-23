@@ -57,6 +57,8 @@ def trigger_jenkins_build_import_stack(stack_name, build_number):
         print(f"Failed to get crumb: {crumb_response.status_code} - {crumb_response.text}")
 
 def importall():
+
+    getStacks()
     threads = []
 
     for stack in stacks.keys():
@@ -94,7 +96,5 @@ def import_stack(stackname):
 
 
 if __name__ == '__main__':
-
-    # trigger_jenkins_build_import_stack('CB', '2.88.0-b12')
 
     importall()
