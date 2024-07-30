@@ -9,7 +9,7 @@ pipeline {
     environment {
         // API_KEY = credentials('depTrack_local_API_KEY')
         // BASE_URL = credentials('depTrack_local_baseurl')
-        API_KEY = credentials('	deptrack_deployed_api_key')
+        API_KEY = credentials('deptrack_deployed_api_key')
         BASE_URL = credentials('deptrack_deployed_base_url')
         STACK_NAME = "${params.stackName}"
         BUILD_NUMBER = "${params.buildNumber}"

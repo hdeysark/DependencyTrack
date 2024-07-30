@@ -4,12 +4,12 @@ pipeline {
     environment {
         // API_KEY = credentials('depTrack_local_API_KEY')
         // BASE_URL = credentials('depTrack_local_baseurl')
-        API_KEY = credentials('	deptrack_deployed_api_key')
+        API_KEY = credentials('deptrack_deployed_api_key')
         BASE_URL = credentials('deptrack_deployed_base_url')
         JOB_NAME = "ImportStack"
         USERNAME = credentials('jenkins_username') 
         API_TOKEN = credentials('jenkins_apitoken')
-        JENKINS_URL = "http://10.200.5.57:8100"
+        JENKINS_URL = "http://localhost:8100"
     }
 
     stages {
