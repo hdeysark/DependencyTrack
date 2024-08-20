@@ -25,11 +25,11 @@ pipeline {
             }
         }
 
-        stage('Import All Stacks') {
-            steps {
-                sh 'python3 importallstacks.py'
-            }
-        }
+        // stage('Import All Stacks') {
+        //     steps {
+        //         sh 'python3 importallstacks.py'
+        //     }
+        // }
 
         stage ('Complete') {
             steps {
