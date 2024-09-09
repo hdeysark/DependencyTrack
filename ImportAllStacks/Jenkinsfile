@@ -4,8 +4,10 @@ pipeline {
     environment {
         // API_KEY = credentials('depTrack_local_API_KEY')
         // BASE_URL = credentials('depTrack_local_baseurl')
-        API_KEY = credentials('deptrack_deployed_api_key')
-        BASE_URL = credentials('deptrack_deployed_base_url')
+        // API_KEY = credentials('deptrack_deployed_api_key')
+        // BASE_URL = credentials('deptrack_deployed_base_url')
+        API_KEY = "ENpnO6nU6JmjXGURJ7weXY7Ig4b9r9u0"
+        BASE_URL = "https://dt.secops-corp.cloudera.com/api"
         JOB_NAME = "ImportStack"
         USERNAME = credentials('jenkins_username') 
         API_TOKEN = credentials('jenkins_apitoken')
