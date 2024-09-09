@@ -12,10 +12,17 @@ deptrack_api_key = get_api_key()
 deptrack_baseurl = get_site_url()
 
 def cleanup():
+
+    print(deptrack_api_key)
+    print(deptrack_baseurl)
+
     url = deptrack_baseurl + "/v1/project?page=1&size=1000"
     headers = {
         'X-API-Key': deptrack_api_key
     }
+
+    testurl = deptrack_baseurl + "/version"
+    response = esponse = requests.get(testurl, headers=headers)
 
     try:
         response = requests.get(url, headers=headers)
