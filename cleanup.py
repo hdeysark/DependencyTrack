@@ -27,6 +27,7 @@ def cleanup():
     try:
         response = requests.get(url, headers=headers)
         print(response)
+        print(response.text)
         if(response.status_code != 200):
             return "Cannot fetch project list for cleanup", 400
         
@@ -48,6 +49,7 @@ def cleanup():
                     delete_url = deptrack_baseurl + "/v1/project/" + uuid
                     delete_response = requests.delete(delete_url, headers=headers)
                     print(delete_response)
+                    print(delete_response.text)
                 else:
                     print("Last BOM import is within a week.")
 
