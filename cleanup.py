@@ -22,12 +22,12 @@ def cleanup():
     }
 
     testurl = deptrack_baseurl + "/version"
-    response = esponse = requests.get(testurl, headers=headers)
+    response = requests.get(testurl, headers=headers)
 
     try:
         response = requests.get(url, headers=headers)
         print(response)
-        print(response.text)
+        # print(response.text)
         if(response.status_code != 200):
             return "Cannot fetch project list for cleanup", 400
         

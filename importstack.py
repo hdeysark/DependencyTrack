@@ -249,6 +249,8 @@ if __name__ == '__main__':
 
     stack_name = get_stack_name()
     build_number = get_build_number()
+    # stack_name = "CB"
+    # build_number = "2.88.0-b125"
 
     print(f"Stack Name: {stack_name}")
     print(f"Build Number: {build_number}")

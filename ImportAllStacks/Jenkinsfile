@@ -9,8 +9,10 @@ pipeline {
         API_KEY = "ENpnO6nU6JmjXGURJ7weXY7Ig4b9r9u0"
         BASE_URL = "https://dt.secops-corp.cloudera.com/api"
         JOB_NAME = "ImportStack"
-        USERNAME = credentials('jenkins_username') 
-        API_TOKEN = credentials('jenkins_apitoken')
+        // USERNAME = credentials('jenkins_username') 
+        // API_TOKEN = credentials('jenkins_apitoken')
+        USERNAME = 'hsarkar'
+        API_TOKEN = '11b872198319bc1d97c5c683afe7cdb645'
         JENKINS_URL = "http://localhost:8100"
     }
 
