@@ -1,6 +1,8 @@
 import requests
 import threading
 import os
+from importstack import importSBOM
+from cleanup import cleanup
 
 stacks = {
     'CDH': 'parcel',
@@ -33,10 +35,6 @@ def trigger_jenkins_build_import_stack(stack_name, build_number):
     job_name = os.getenv('JOB_NAME')
     username = os.getenv('USERNAME')
     api_token = os.getenv('API_TOKEN')
-    # jenkins_url = "http://localhost:8100"
-    # job_name = 'Import Stack'
-    # username = 'hsarkar'
-    # api_token = '11b872198319bc1d97c5c683afe7cdb645'
 
     job_url = f"{jenkins_url}/job/{job_name}/buildWithParameters"
     crumb_url = f"{jenkins_url}/crumbIssuer/api/json"
@@ -96,9 +94,11 @@ def import_stack(stackname):
             stack_name=stackname
             build_number=details['last_sucessful_build']
 
-            trigger_jenkins_build_import_stack(stack_name, build_number)
+            # trigger_jenkins_build_import_stack(stack_name, build_number)
+            importSBOM(stack_name, build_number)
 
 
 if __name__ == '__main__':
 
+    cleanup()
     importall()
