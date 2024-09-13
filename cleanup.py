@@ -10,6 +10,8 @@ def get_site_url():
 
 deptrack_api_key = get_api_key()
 deptrack_baseurl = get_site_url()
+# deptrack_api_key = "ENpnO6nU6JmjXGURJ7weXY7Ig4b9r9u0"
+# deptrack_baseurl = "https://dt.secops-corp.cloudera.com/api"
 
 def cleanup():
 

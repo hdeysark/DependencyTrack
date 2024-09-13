@@ -17,10 +17,10 @@ def get_stack_name():
 def get_build_number():
     return os.getenv('BUILD_NUMBER')
 
-# deptrack_api_key = get_api_key()
-# deptrack_baseurl = get_site_url()
-deptrack_api_key = "ENpnO6nU6JmjXGURJ7weXY7Ig4b9r9u0"
-deptrack_baseurl = "https://dt.secops-corp.cloudera.com/api"
+deptrack_api_key = get_api_key()
+deptrack_baseurl = get_site_url()
+# deptrack_api_key = "ENpnO6nU6JmjXGURJ7weXY7Ig4b9r9u0"
+# deptrack_baseurl = "https://dt.secops-corp.cloudera.com/api"
 
 stacks = {
     'CDH': 'parcel',
@@ -249,10 +249,10 @@ if __name__ == '__main__':
     getStacks()
     print(stacks)
 
-    # stack_name = get_stack_name()
-    # build_number = get_build_number()
-    stack_name = "CB"
-    build_number = "2.88.0-b125"
+    stack_name = get_stack_name()
+    build_number = get_build_number()
+    # stack_name = "CB"
+    # build_number = "2.88.0-b125"
 
     print(f"Stack Name: {stack_name}")
     print(f"Build Number: {build_number}")

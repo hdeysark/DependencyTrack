@@ -8,7 +8,7 @@ pipeline {
         // BASE_URL = credentials('deptrack_deployed_base_url')
         API_KEY = "ENpnO6nU6JmjXGURJ7weXY7Ig4b9r9u0"
         BASE_URL = "https://dt.secops-corp.cloudera.com/api"
-        JOB_NAME = "ImportStack"
+        JOB_NAME = "Import Stack"
         // USERNAME = credentials('jenkins_username') 
         // API_TOKEN = credentials('jenkins_apitoken')
         USERNAME = 'hsarkar'
